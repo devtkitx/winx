@@ -1,6 +1,7 @@
-# WinX CLI
+# PwrX ⚡
+Advanced PowerShell Utilities for Windows Automation & Scripting
 
-**WinX** is a PowerShell-based CLI toolkit designed to automate Windows system setup, optimization, and developer tooling — especially for fresh installations or reproducible environments.
+**PwrX** is a PowerShell-based CLI toolkit designed to automate Windows system setup, optimization, and developer tooling — especially for fresh installations or reproducible environments.
 
 > Built for Windows power users, system integrators, and developers who want automation with control.
 
@@ -20,32 +21,12 @@
 - PowerShell ≥ 5.1 (also supports PowerShell Core 7+)
 - Administrator rights for system-level tasks
 
-## Usage
-
-Run the CLI from PowerShell:
-
-```powershell
-.\scripts\winx.ps1 <command> <subcommand> [options]
-```
-
-Or use it via explicit invocation from any shell:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File ./scripts/winx.ps1 <command> <subcommand> [options]
-```
-
-You can also use the root shim:
-
-```powershell
-.\winx.ps1 <command> <subcommand> [options]
-```
-
 ## Project Structure
 
 ```bash
-winx/
+pwrx/
 ├── scripts/
-│   ├── winx.ps1                # Main CLI entrypoint
+│   ├── pwrx.ps1                # Main CLI entrypoint
 │   ├── commands/
 │   │   ├── help.ps1            # CLI help
 │   │   ├── system/
@@ -53,21 +34,11 @@ winx/
 │   │   │   └── update.ps1      # Windows Update handler
 │   │   └── tools/
 │   │       └── install.ps1     # Install Git, Node, etc.
-├── winx.ps1                    # Root-level shim (optional)
+├── pwrx.ps1                    # Root-level shim (optional)
 ├── README.md
 └── docs/
     └── contributing/
         └── directory-structure.md
-```
-
-## Examples
-
-```powershell
-# Optimize system performance
-.\scripts\winx.ps1 system optimize -Yes
-
-# Check for and install Windows updates
-.\scripts\winx.ps1 system update
 ```
 
 ## Adding New Commands
@@ -80,13 +51,7 @@ Example:
 scripts/
 └── commands/
     └── system/
-        └── optimize.ps1  # winx system optimize
-```
-
-You can then invoke:
-
-```powershell
-.\scripts\winx.ps1 ssh generate
+        └── optimize.ps1  # pwrx system optimize
 ```
 
 ## Contributing
